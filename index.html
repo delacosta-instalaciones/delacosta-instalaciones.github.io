@@ -3,72 +3,229 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delacosta Instalaciones | Seguridad Electrónica</title>
 
-<title>Delacosta Instalaciones | Seguridad en Madariaga</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/style.css">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top left, #0f172a, #020617 70%);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 10%;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.3);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    height:70px;
+    transition:0.3s;
+}
+
+.logo:hover{
+    transform:scale(1.08);
+    filter: drop-shadow(0 0 12px #00f2ff);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#00f2ff;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+
+.hero{
+    height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    font-weight:800;
+    background: linear-gradient(90deg,#00f2ff,#0077ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:1.2rem;
+    max-width:700px;
+    opacity:0.8;
+}
+
+.hero button{
+    margin-top:35px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background: linear-gradient(90deg,#00f2ff,#0077ff);
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 25px #00f2ff;
+}
+
+/* SERVICIOS */
+
+.section{
+    padding:100px 10%;
+}
+
+.section h2{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:60px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.card{
+    background: rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter: blur(12px);
+    transition:0.4s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,242,255,0.4);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:0.9rem;
+    opacity:0.8;
+    margin-bottom:20px;
+}
+
+.card a{
+    text-decoration:none;
+    color:#00f2ff;
+    font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    opacity:0.6;
+    font-size:0.9rem;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.2rem;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-<div class="container header-flex">
-<img src="assets/img/logo.png" class="logo">
-<nav>
-<a href="index.html">Inicio</a>
-<a href="servicios/cctv.html">Servicios</a>
-<a href="#">Trabajos</a>
-<a href="#">Nosotros</a>
-<a href="#">Contacto</a>
-</nav>
-</div>
+    <img src="logo.png" class="logo">
+    <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 </header>
 
 <section class="hero">
-<div class="container reveal">
-<h1>Seguridad Profesional en General Madariaga</h1>
-<p>Instalación certificada de CCTV, alarmas, videoportería, control de acceso y redes profesionales.</p>
-<a href="#" class="button">Solicitar Presupuesto</a>
-</div>
+    <h1>Seguridad Electrónica Profesional</h1>
+    <p>Cámaras, Alarmas, Redes y Automatización en General Madariaga y la Costa Atlántica.</p>
+    <button onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">
+        Ver Servicios
+    </button>
 </section>
 
-<section class="section reveal">
-<div class="container">
-<h2>Servicios Destacados</h2>
+<section class="section" id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
 
-<div class="card">
-<h3>CCTV Profesional</h3>
-<p>Instalación de cámaras IP, HD y 4K con monitoreo remoto desde celular y acceso seguro.</p>
-<a href="servicios/cctv.html" class="button">Ver más</a>
-</div>
+        <div class="card">
+            <h3>CCTV</h3>
+            <p>Sistemas de videovigilancia profesional IP y HD.</p>
+            <a href="servicios/cctv.html">Ver más</a>
+        </div>
 
-<div class="card">
-<h3>Sistemas de Alarmas</h3>
-<p>Protección integral para hogares y comercios con sensores y control desde app móvil.</p>
-<a href="servicios/alarmas.html" class="button">Ver más</a>
-</div>
+        <div class="card">
+            <h3>Alarmas</h3>
+            <p>Instalación y configuración de alarmas monitoreadas.</p>
+            <a href="servicios/alarmas.html">Ver más</a>
+        </div>
 
-</div>
-</section>
+        <div class="card">
+            <h3>Redes</h3>
+            <p>Infraestructura y optimización de redes empresariales.</p>
+            <a href="servicios/redes.html">Ver más</a>
+        </div>
 
-<section class="section-dark reveal">
-<div class="container">
-<h2>¿Por qué elegirnos?</h2>
-<ul class="benefits">
-<li>✔ Instalaciones profesionales</li>
-<li>✔ Servicio técnico local</li>
-<li>✔ Presupuesto sin compromiso</li>
-<li>✔ Atención personalizada</li>
-</ul>
-</div>
+    </div>
 </section>
 
 <footer>
-<div class="container">
-<p>Delacosta Instalaciones | General Juan Madariaga</p>
-</div>
+    © 2026 Delacosta Instalaciones | Seguridad Electrónica
 </footer>
-
-<script src="assets/js/main.js"></script>
 
 </body>
 </html>
