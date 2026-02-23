@@ -4,76 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Delacosta Instalaciones | CCTV, Alarmas y Redes en General Madariaga</title>
+<title>Delacosta Instalaciones | Seguridad y Tecnología en Madariaga</title>
 
-<meta name="description" content="Instalación profesional de cámaras de seguridad, alarmas, videoportería, control de acceso, redes WiFi y Starlink en General Juan Madariaga y zona. Presupuesto sin compromiso.">
+<meta name="description" content="Cámaras de seguridad, alarmas, videoportería, control de acceso, redes WiFi y Starlink en General Juan Madariaga. Instalación profesional y asesoramiento personalizado.">
 
-<meta name="keywords" content="camaras de seguridad Madariaga, alarmas Madariaga, CCTV General Madariaga, instalación Starlink Madariaga, control de acceso, videoportero">
-
-<meta name="author" content="Delacosta Instalaciones">
+<meta name="keywords" content="camaras Madariaga, CCTV Madariaga, alarmas Madariaga, Starlink Madariaga, videoportero, control acceso">
 
 <meta property="og:title" content="Delacosta Instalaciones - Seguridad Inteligente">
-<meta property="og:description" content="Especialistas en CCTV, alarmas y redes en General Madariaga.">
+<meta property="og:description" content="Especialistas en CCTV y tecnología en General Madariaga.">
 <meta property="og:type" content="website">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 body{
     font-family:'Inter',sans-serif;
-    background:#0b0b0d;
+    background:#070709;
     color:#fff;
     overflow-x:hidden;
 }
 
-/* Glow background */
+/* Glow animated */
 body::before{
     content:"";
     position:fixed;
-    width:600px;
-    height:600px;
+    width:800px;
+    height:800px;
     background:radial-gradient(circle,#ff7a00 0%, transparent 70%);
-    top:-200px;
-    right:-200px;
-    opacity:.15;
+    top:-300px;
+    right:-300px;
+    opacity:.12;
+    animation:pulse 6s infinite alternate;
     z-index:-2;
+}
+@keyframes pulse{
+    from{transform:scale(1)}
+    to{transform:scale(1.2)}
+}
+
+/* Particles Canvas */
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
 }
 
 /* Header */
 header{
-    padding:120px 20px;
+    padding:150px 20px;
     text-align:center;
 }
 
 .logo{
-    width:220px;
+    width:230px;
+    filter:drop-shadow(0 0 30px #ff7a00);
     animation:float 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 20px #ff7a00);
 }
-
 @keyframes float{
     0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-10px)}
+    50%{transform:translateY(-12px)}
 }
 
 h1{
+    margin-top:40px;
     font-size:3rem;
-    margin-top:30px;
     color:#ff7a00;
-    text-shadow:0 0 25px #ff7a00;
+    text-shadow:0 0 35px #ff7a00;
 }
 
 .subtitle{
     margin-top:20px;
     color:#aaa;
     max-width:700px;
-    margin-inline:auto;
+    margin:auto;
 }
 
+/* Sections */
 section{
-    padding:100px 20px;
+    padding:120px 20px;
     max-width:1100px;
     margin:auto;
 }
@@ -84,7 +94,7 @@ section{
     color:#ff7a00;
 }
 
-/* Scroll Animation */
+/* Fade animation */
 .fade{
     opacity:0;
     transform:translateY(40px);
@@ -95,59 +105,69 @@ section{
     transform:translateY(0);
 }
 
+/* Services */
 .service{
     margin-bottom:80px;
 }
-
 .service h3{
     color:#ff7a00;
     margin-bottom:15px;
 }
-
 .service p{
     color:#ccc;
     line-height:1.7;
 }
 
+/* Stats */
+.stats{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    text-align:center;
+}
+.stat{
+    margin:20px;
+}
+.stat h2{
+    font-size:3rem;
+    color:#ff7a00;
+}
+
+/* Gallery */
 .gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
+    gap:30px;
 }
-
 .gallery img{
     width:100%;
-    border-radius:10px;
+    border-radius:12px;
     transition:.4s;
-    border:1px solid #222;
 }
-
 .gallery img:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 30px #ff7a00;
+    transform:scale(1.07);
+    box-shadow:0 0 40px #ff7a00;
 }
 
+/* CTA */
 .cta{
     text-align:center;
-    padding:100px 20px;
     border-top:1px solid #222;
 }
-
 .button{
     display:inline-block;
-    padding:18px 40px;
+    padding:18px 45px;
     background:#ff7a00;
     color:#000;
+    border-radius:6px;
     text-decoration:none;
     font-weight:600;
-    border-radius:6px;
     margin-top:30px;
     transition:.3s;
 }
-
 .button:hover{
     background:#fff;
-    box-shadow:0 0 35px #ff7a00;
+    box-shadow:0 0 40px #ff7a00;
 }
 
 footer{
@@ -158,91 +178,160 @@ footer{
 }
 </style>
 
-<!-- SEO STRUCTURED DATA -->
+<!-- LocalBusiness Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Delacosta Instalaciones",
-  "image": "logo.png",
   "telephone": "+542267664081",
-  "email": "delacosta.instalaciones@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "General Juan Madariaga",
     "addressRegion": "Buenos Aires",
     "addressCountry": "AR"
-  },
-  "areaServed": "General Juan Madariaga y zona"
+  }
 }
 </script>
 
 </head>
 <body>
 
+<canvas id="particles"></canvas>
+
 <header>
-    <img src="logo.png" class="logo">
-    <h1>Seguridad Inteligente Profesional</h1>
-    <p class="subtitle">
-        Instalamos tecnología de seguridad avanzada para hogares, comercios y empresas en General Madariaga.
-    </p>
+<img src="logo.png" class="logo">
+<h1>Seguridad Inteligente Profesional</h1>
+<p class="subtitle">
+Soluciones avanzadas en CCTV, alarmas, videoportería, control de acceso y redes en General Madariaga.
+</p>
 </header>
 
 <section>
-    <h2 class="section-title fade">Servicios Profesionales</h2>
+<h2 class="section-title fade">Servicios Profesionales</h2>
 
-    <div class="service fade">
-        <h3>CCTV Profesional</h3>
-        <p>Sistemas de videovigilancia HD/IP con monitoreo remoto 24/7, grabación inteligente y detección de movimiento.</p>
-    </div>
+<div class="service fade">
+<h3>CCTV Profesional</h3>
+<p>Sistemas IP de alta definición con grabación inteligente, monitoreo remoto y detección avanzada de movimiento.</p>
+</div>
 
-    <div class="service fade">
-        <h3>Alarmas Inteligentes</h3>
-        <p>Protección perimetral y volumétrica con notificaciones móviles e integración con cámaras.</p>
-    </div>
+<div class="service fade">
+<h3>Alarmas Inteligentes</h3>
+<p>Protección integral con sensores perimetrales, notificaciones móviles y conexión con videovigilancia.</p>
+</div>
 
-    <div class="service fade">
-        <h3>Videoportería & Control de Acceso</h3>
-        <p>Sistemas IP y biométricos para gestión segura de ingresos en viviendas y empresas.</p>
-    </div>
+<div class="service fade">
+<h3>Videoportería y Control de Acceso</h3>
+<p>Control biométrico, RFID y apertura remota con integración a automatización de portones.</p>
+</div>
 
-    <div class="service fade">
-        <h3>Redes WiFi & Starlink</h3>
-        <p>Instalación y optimización de redes, cobertura total y conexión satelital en zonas rurales.</p>
-    </div>
+<div class="service fade">
+<h3>Redes WiFi & Starlink</h3>
+<p>Diseño e instalación de redes optimizadas y conexión satelital profesional.</p>
+</div>
+
 </section>
 
 <section>
-    <h2 class="section-title fade">Trabajos Realizados</h2>
+<h2 class="section-title fade">Resultados</h2>
+<div class="stats fade">
+<div class="stat">
+<h2 data-target="150">0</h2>
+<p>Instalaciones</p>
+</div>
+<div class="stat">
+<h2 data-target="100">0</h2>
+<p>Clientes satisfechos</p>
+</div>
+<div class="stat">
+<h2 data-target="5">0</h2>
+<p>Años de experiencia</p>
+</div>
+</div>
+</section>
 
-    <div class="gallery fade">
-        <img src="trabajo1.jpg">
-        <img src="trabajo2.jpg">
-        <img src="trabajo3.jpg">
-    </div>
+<section>
+<h2 class="section-title fade">Trabajos Realizados</h2>
+<div class="gallery fade">
+<img src="trabajo1.jpg">
+<img src="trabajo2.jpg">
+<img src="trabajo3.jpg">
+</div>
 </section>
 
 <section class="cta fade">
-    <h2>Solicitá tu presupuesto sin compromiso</h2>
-    <a href="https://wa.me/542267664081" class="button">Contactar por WhatsApp</a>
+<h2>Solicitá tu presupuesto sin compromiso</h2>
+<a href="https://wa.me/542267664081" class="button">Contactar por WhatsApp</a>
+</section>
+
+<section>
+<h2 class="section-title fade">Ubicación</h2>
+<iframe class="fade" src="https://www.google.com/maps?q=General+Juan+Madariaga&output=embed" width="100%" height="400" style="border-radius:12px;border:none;"></iframe>
 </section>
 
 <footer>
-    Delacosta Instalaciones | General Juan Madariaga <br>
-    Tel: 2267 664081 | delacosta.instalaciones@gmail.com
+Delacosta Instalaciones | General Juan Madariaga<br>
+Tel: 2267 664081 | delacosta.instalaciones@gmail.com
 </footer>
 
 <script>
+// Scroll animation
 const faders=document.querySelectorAll('.fade');
-const appearOptions={threshold:0.2};
-const appearOnScroll=new IntersectionObserver(function(entries,observer){
+const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
-if(!entry.isIntersecting)return;
+if(entry.isIntersecting){
 entry.target.classList.add('show');
-observer.unobserve(entry.target);
+}
 });
-},appearOptions);
-faders.forEach(fader=>appearOnScroll.observe(fader));
+},{threshold:0.2});
+faders.forEach(f=>observer.observe(f));
+
+// Counter animation
+const counters=document.querySelectorAll('[data-target]');
+counters.forEach(counter=>{
+const update=()=>{
+const target=+counter.getAttribute('data-target');
+const c=+counter.innerText;
+const inc=target/200;
+if(c<target){
+counter.innerText=Math.ceil(c+inc);
+setTimeout(update,10);
+}else{
+counter.innerText=target;
+}
+}
+update();
+});
+
+// Particle Network
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+let particles=[];
+for(let i=0;i<80;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+vx:(Math.random()-.5),
+vy:(Math.random()-.5)
+});
+}
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+particles.forEach(p=>{
+p.x+=p.vx;
+p.y+=p.vy;
+if(p.x<0||p.x>canvas.width)p.vx*=-1;
+if(p.y<0||p.y>canvas.height)p.vy*=-1;
+ctx.beginPath();
+ctx.arc(p.x,p.y,2,0,Math.PI*2);
+ctx.fillStyle="#ff7a00";
+ctx.fill();
+});
+requestAnimationFrame(animate);
+}
+animate();
 </script>
 
 </body>
