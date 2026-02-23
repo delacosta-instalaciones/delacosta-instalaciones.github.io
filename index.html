@@ -3,187 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delacosta Instalaciones | Seguridad y Tecnología</title>
-<meta name="description" content="Instalación de cámaras, alarmas, domótica, redes WiFi, automatización de portones y más en General Madariaga y zona.">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<title>Delacosta Instalaciones | CCTV, Alarmas y Redes en General Madariaga</title>
+
+<meta name="description" content="Instalación profesional de cámaras de seguridad, alarmas, videoportería, control de acceso, redes WiFi y Starlink en General Juan Madariaga y zona. Presupuesto sin compromiso.">
+
+<meta name="keywords" content="camaras de seguridad Madariaga, alarmas Madariaga, CCTV General Madariaga, instalación Starlink Madariaga, control de acceso, videoportero">
+
+<meta name="author" content="Delacosta Instalaciones">
+
+<meta property="og:title" content="Delacosta Instalaciones - Seguridad Inteligente">
+<meta property="og:description" content="Especialistas en CCTV, alarmas y redes en General Madariaga.">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0b0b0d;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background: #0c0c0c;
-    color: white;
+/* Glow background */
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#ff7a00 0%, transparent 70%);
+    top:-200px;
+    right:-200px;
+    opacity:.15;
+    z-index:-2;
 }
 
-header {
-    padding: 40px 20px;
-    text-align: center;
-    background: linear-gradient(145deg, #111, #000);
-    border-bottom: 2px solid #ff7a00;
+/* Header */
+header{
+    padding:120px 20px;
+    text-align:center;
 }
 
-.logo {
-    max-width: 300px;
-    margin-bottom: 20px;
+.logo{
+    width:220px;
+    animation:float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px #ff7a00);
 }
 
-h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #ff7a00;
-    text-shadow: 0 0 15px #ff7a00;
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
 }
 
-.subtitle {
-    margin-top: 10px;
-    font-weight: 300;
-    color: #ccc;
+h1{
+    font-size:3rem;
+    margin-top:30px;
+    color:#ff7a00;
+    text-shadow:0 0 25px #ff7a00;
 }
 
-section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
+.subtitle{
+    margin-top:20px;
+    color:#aaa;
+    max-width:700px;
+    margin-inline:auto;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #ff7a00;
+section{
+    padding:100px 20px;
+    max-width:1100px;
+    margin:auto;
 }
 
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+.section-title{
+    font-size:2rem;
+    margin-bottom:60px;
+    color:#ff7a00;
 }
 
-.card {
-    background: #111;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #222;
-    transition: 0.3s;
+/* Scroll Animation */
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
-.card:hover {
-    border: 1px solid #ff7a00;
-    box-shadow: 0 0 20px #ff7a00;
+.service{
+    margin-bottom:80px;
 }
 
-.card h3 {
-    margin-bottom: 15px;
-    color: #ff7a00;
+.service h3{
+    color:#ff7a00;
+    margin-bottom:15px;
 }
 
-.card p {
-    color: #ccc;
-    font-size: 0.95rem;
+.service p{
+    color:#ccc;
+    line-height:1.7;
 }
 
-.cta {
-    text-align: center;
-    background: #111;
-    border-top: 2px solid #ff7a00;
-    border-bottom: 2px solid #ff7a00;
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
 }
 
-.cta h2 {
-    margin-bottom: 20px;
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    transition:.4s;
+    border:1px solid #222;
 }
 
-.button {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #ff7a00;
-    color: black;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px #ff7a00;
 }
 
-.button:hover {
-    background: white;
-    box-shadow: 0 0 20px #ff7a00;
+.cta{
+    text-align:center;
+    padding:100px 20px;
+    border-top:1px solid #222;
 }
 
-footer {
-    padding: 30px;
-    text-align: center;
-    font-size: 0.9rem;
-    background: #000;
-    color: #777;
+.button{
+    display:inline-block;
+    padding:18px 40px;
+    background:#ff7a00;
+    color:#000;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:6px;
+    margin-top:30px;
+    transition:.3s;
 }
 
-@media(max-width:768px){
-    h1{
-        font-size:2rem;
-    }
+.button:hover{
+    background:#fff;
+    box-shadow:0 0 35px #ff7a00;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#666;
+    border-top:1px solid #111;
 }
 </style>
+
+<!-- SEO STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Delacosta Instalaciones",
+  "image": "logo.png",
+  "telephone": "+542267664081",
+  "email": "delacosta.instalaciones@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "General Juan Madariaga",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "areaServed": "General Juan Madariaga y zona"
+}
+</script>
+
 </head>
 <body>
 
 <header>
-    <!-- Reemplazar src por tu logo -->
-    <img src="logo.png" alt="Delacosta Instalaciones" class="logo">
-    <h1>Seguridad & Tecnología Profesional</h1>
-    <p class="subtitle">Instalaciones modernas, seguras y confiables</p>
+    <img src="logo.png" class="logo">
+    <h1>Seguridad Inteligente Profesional</h1>
+    <p class="subtitle">
+        Instalamos tecnología de seguridad avanzada para hogares, comercios y empresas en General Madariaga.
+    </p>
 </header>
 
 <section>
-    <h2 class="section-title">Nuestros Servicios</h2>
+    <h2 class="section-title fade">Servicios Profesionales</h2>
 
-    <div class="services">
-        <div class="card">
-            <h3>Cámaras de Seguridad</h3>
-            <p>Instalación profesional de sistemas CCTV con monitoreo remoto.</p>
-        </div>
+    <div class="service fade">
+        <h3>CCTV Profesional</h3>
+        <p>Sistemas de videovigilancia HD/IP con monitoreo remoto 24/7, grabación inteligente y detección de movimiento.</p>
+    </div>
 
-        <div class="card">
-            <h3>Alarmas</h3>
-            <p>Sistemas de alarma para hogares y comercios.</p>
-        </div>
+    <div class="service fade">
+        <h3>Alarmas Inteligentes</h3>
+        <p>Protección perimetral y volumétrica con notificaciones móviles e integración con cámaras.</p>
+    </div>
 
-        <div class="card">
-            <h3>Automatización de Portones</h3>
-            <p>Motorizar tu acceso con tecnología confiable y segura.</p>
-        </div>
+    <div class="service fade">
+        <h3>Videoportería & Control de Acceso</h3>
+        <p>Sistemas IP y biométricos para gestión segura de ingresos en viviendas y empresas.</p>
+    </div>
 
-        <div class="card">
-            <h3>Cerraduras Electrónicas</h3>
-            <p>Control inteligente de accesos con sistemas digitales.</p>
-        </div>
-
-        <div class="card">
-            <h3>Redes WiFi</h3>
-            <p>Instalación y optimización de redes inalámbricas.</p>
-        </div>
-
-        <div class="card">
-            <h3>Domótica</h3>
-            <p>Automatización del hogar y control inteligente.</p>
-        </div>
+    <div class="service fade">
+        <h3>Redes WiFi & Starlink</h3>
+        <p>Instalación y optimización de redes, cobertura total y conexión satelital en zonas rurales.</p>
     </div>
 </section>
 
-<section class="cta">
-    <h2>¿Necesitás asesoramiento?</h2>
+<section>
+    <h2 class="section-title fade">Trabajos Realizados</h2>
+
+    <div class="gallery fade">
+        <img src="trabajo1.jpg">
+        <img src="trabajo2.jpg">
+        <img src="trabajo3.jpg">
+    </div>
+</section>
+
+<section class="cta fade">
+    <h2>Solicitá tu presupuesto sin compromiso</h2>
     <a href="https://wa.me/542267664081" class="button">Contactar por WhatsApp</a>
 </section>
 
 <footer>
-    <p>Delacosta Instalaciones - General Madariaga</p>
-    <p>Tel: 2267 664081 | delacosta.instalaciones@gmail.com</p>
+    Delacosta Instalaciones | General Juan Madariaga <br>
+    Tel: 2267 664081 | delacosta.instalaciones@gmail.com
 </footer>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+const appearOptions={threshold:0.2};
+const appearOnScroll=new IntersectionObserver(function(entries,observer){
+entries.forEach(entry=>{
+if(!entry.isIntersecting)return;
+entry.target.classList.add('show');
+observer.unobserve(entry.target);
+});
+},appearOptions);
+faders.forEach(fader=>appearOnScroll.observe(fader));
+</script>
 
 </body>
 </html>
