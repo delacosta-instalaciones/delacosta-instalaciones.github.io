@@ -1,34 +1,105 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delacosta Instalaciones | Seguridad y Domótica</title>
-<style>
-body { font-family: Arial, sans-serif; background-color: #121212; color: #ffffff; margin: 0; padding: 0; }
-header { background-color: #000000; padding: 30px; text-align: center; border-bottom: 2px solid #ff8c00; }
-h1 { color: #ff8c00; font-size: 2.5rem; margin: 0; text-transform: uppercase; }
-h2 { color: #aaaaaa; font-weight: normal; font-size: 1.2rem; }
-.container { max-width: 900px; margin: 20px auto; padding: 20px; }
-.servicios { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-.tarjeta { background-color: #1e1e1e; padding: 20px; border-radius: 8px; width: 250px; border-left: 4px solid #ff8c00; }
-.tarjeta h3 { color: #ff8c00; margin-top: 0; }
-.contacto { text-align: center; margin-top: 40px; padding: 20px; background-color: #1e1e1e; border-radius: 8px; }
-.boton { display: inline-block; background-color: #ff8c00; color: #000; padding: 15px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 15px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delacosta Instalaciones | Tienda Oficial</title>
+    <style>
+        :root {
+            --primary: #ff8c00;
+            --bg-dark: #0a0a0a;
+            --bg-card: #161616;
+            --text-light: #ffffff;
+        }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-dark); color: var(--text-light); margin: 0; }
+        header { background: #000; padding: 40px 20px; text-align: center; border-bottom: 3px solid var(--primary); }
+        h1 { color: var(--primary); margin: 0; letter-spacing: 3px; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .tienda-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .producto-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+        .producto-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        
+        .producto-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid #333;
+        }
+        
+        .producto-info { padding: 20px; text-align: center; }
+        .producto-info h3 { color: var(--primary); margin: 0 0 10px 0; }
+        .precio { font-size: 1.4rem; font-weight: bold; margin-bottom: 15px; display: block; }
+        
+        .btn-ws {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 80%;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-<h1>DELACOSTA</h1>
-<h2>— INSTALACIONES —</h2>
-<p>Especialistas en seguridad electrónica, electricidad y domótica.</p>
+    <h1>DELACOSTA</h1>
+    <p>Seguridad Electrónica & Domótica</p>
 </header>
 
 <div class="container">
-<h2 style="text-align: center; color: white;">Nuestros Servicios en la Costa Atlántica</h2>
+    <h2 style="text-align: center; margin-bottom: 40px;">Catálogo de Productos</h2>
+    
+    <div class="tienda-grid">
+        <div class="producto-card">
+            <img src="ezviz-h8c.jpg" alt="Ezviz H8C" class="producto-img">
+            <div class="producto-info">
+                <h3>Cámara EZVIZ H8C</h3>
+                <p>Exterior Motorizada - ¡Instalación Incluida!</p>
+                <span class="precio">Consultar Precio</span>
+                <a href="https://wa.me/5492267664081?text=Hola%20Oz,%20me%20interesa%20la%20Cámara%20EZVIZ%20H8C" class="btn-ws" target="_blank">Pedir por WhatsApp</a>
+            </div>
+        </div>
 
+        <div class="producto-card">
+            <img src="ds-kis603-p.jpg" alt="Hikvision Portero" class="producto-img">
+            <div class="producto-info">
+                <h3>Portero Hikvision DS-KIS603-P</h3>
+                <p>Kit Visor IP - ¡Instalación Incluida!</p>
+                <span class="precio">Consultar Precio</span>
+                <a href="https://wa.me/5492267664081?text=Hola%20Oz,%20me%20interesa%20el%20Portero%20Hikvision%20DS-KIS603-P" class="btn-ws" target="_blank">Pedir por WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="producto-card">
+            <div style="height: 250px; background: #222; display: flex; align-items: center; justify-content: center;">📡</div>
+            <div class="producto-info">
+                <h3>Antena Starlink</h3>
+                <p>Instalación profesional y configuración de red.</p>
+                <span class="precio">Consultar Presupuesto</span>
+                <a href="https://wa.me/5492267664081?text=Hola%20Oz,%20me%20interesa%20la%20instalación%20de%20Starlink" class="btn-ws" target="_blank">Pedir por WhatsApp</a>
+            </div>
+        </div>
+    </div>
 </div>
 
-</body> </html>
+<footer style="text-align: center; padding: 40px; color: #666;">
+    <p>&copy; 2026 Delacosta Instalaciones. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
